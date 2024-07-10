@@ -8,7 +8,7 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 app.set("view engine", "ejs");
-app.use(express.static(path.join(__dirname, "public"))); // Corrected line
+app.use(express.static(path.join(__dirname, "public"))); //This make importance 
 
 io.on("connection", function (socket) {
     socket.on("send-location",function (data) {
